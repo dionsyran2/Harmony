@@ -39,12 +39,12 @@ This is the list of User Ids of the people who will be able to use the reload co
 
 Put the ID's of the users who you want to be able to use the reload command, as a string (inside "") separated by commas (,) except the last one
 example:
-`
+```json
 [
   "123456789",
   "987654321"
 ]
-`
+```
 
 #### botinfo.json
 Just replace the info, you can do it. Its the info displayed when you use the **info** command
@@ -62,7 +62,7 @@ If you get any errors create a new issue!
 
 
 ### Normal Command Template
-`
+```js
 module.exports = {
     name: "template",
     description: "template",
@@ -77,12 +77,13 @@ module.exports = {
     },
     aliases: ['template']
 }
-`
+```
 
 
 ### slash command template:
 
-`
+```js
+
 const { SlashCommandBuilder } = require('@discordjs/builders');
 
 module.exports = {
@@ -97,4 +98,4 @@ module.exports = {
 	},
 };
 
-`
+```
