@@ -88,7 +88,6 @@ client.LoadCmds = function () {
 client.LoadCmds()
 
 
-const clientId = '836911173990875137';
 client.LoadSlashCmds = function () {
     let commands = [];
     let commandFiles = fs.readdirSync('./Bots/Music/slash_commands').filter(file => file.endsWith('.js'));
@@ -120,7 +119,7 @@ client.LoadSlashCmds = function () {
             console.log('Started refreshing application (/) commands.');
 
             await rest.put(
-                Routes.applicationCommands(clientId),
+                Routes.applicationCommands(config.id),
                 { body: commands },
             );
 
