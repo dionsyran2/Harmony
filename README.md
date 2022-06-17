@@ -57,3 +57,44 @@ Just replace the info, you can do it. Its the info displayed when you use the **
 It will display some texts and if you have done everything right, at the end you will see a message `Logged in as [Your bot's name]`
 
 If you get any errors create a new issue!
+
+
+
+
+### Normal Command Template
+`
+module.exports = {
+    name: "template",
+    description: "template",
+    run: async function (message, args, client, discord) {
+
+        try {
+            console.log('template')
+        } catch (err) {
+            message.channel.send(`An Unknown Error Occured: ${err}`)
+        }
+
+    },
+    aliases: ['template']
+}
+`
+
+
+### slash command template:
+
+`
+const { SlashCommandBuilder } = require('@discordjs/builders');
+
+module.exports = {
+	data: new SlashCommandBuilder()
+		.setName('template')
+		.setDescription('template'),
+    
+	async execute(interaction, discord, client) {
+  
+		interaction.editReply('template')
+    
+	},
+};
+
+`
