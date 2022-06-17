@@ -1,5 +1,7 @@
 # Make your own music bot!
 
+<img src="https://camo.githubusercontent.com/f86c1d7af96ad6fa88cd390ce47ead4e668ae2e9b60cc5ffd41c9c8ed4101847/68747470733a2f2f63646e2e646973636f72646170702e636f6d2f617661746172732f3833363931313137333939303837353133372f34393232383338343634303735373963653637393939646164303334363633632e706e673f73697a653d34303936" alt="" data-canonical-src="https://cdn.discordapp.com/avatars/836911173990875137/492283846407579ce67999dad034663c.png?size=4096" width="150" height="150">
+
 ### Apps you will need:
 * [Node.js](https://nodejs.org/en/download/): The programming language used to make this bot.
 * [Visual Studio Code](https://code.visualstudio.com/download) or any code editor.
