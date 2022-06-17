@@ -56,12 +56,12 @@ client.login(config.token);
 //commands
 client.LoadCmds = function () {
     client.commands = []
-    const commandFiles = fs.readdirSync('./Bots/Music/commands');
+    const commandFiles = fs.readdirSync('./commands');
     delete require.cache[require.resolve(`./commands/reload.js`)]
     client.commands.push(require(`./commands/reload.js`));
     for (const file of commandFiles) {
-        if (fs.lstatSync(`./Bots/Music/commands/${file}`).isDirectory()) {
-            for (const file2 of fs.readdirSync(`./Bots/Music/commands/${file}`).filter(file => file.endsWith('.js'))) {
+        if (fs.lstatSync(`./commands/${file}`).isDirectory()) {
+            for (const file2 of fs.readdirSync(`./commands/${file}`).filter(file => file.endsWith('.js'))) {
                 console.log(file2)
                 if (file2 !== "reload.js") {
                     delete require.cache[require.resolve(`./commands/${file}/${file2}`)]
@@ -90,7 +90,7 @@ client.LoadCmds()
 
 client.LoadSlashCmds = function () {
     let commands = [];
-    let commandFiles = fs.readdirSync('./Bots/Music/slash_commands').filter(file => file.endsWith('.js'));
+    let commandFiles = fs.readdirSync('./slash_commands').filter(file => file.endsWith('.js'));
 
 
 
@@ -103,7 +103,7 @@ client.LoadSlashCmds = function () {
     }
 
 
-    let commandFilesS = fs.readdirSync('./Bots/Music/slash_commands').filter(file => file.endsWith('.js'));
+    let commandFilesS = fs.readdirSync('./slash_commands').filter(file => file.endsWith('.js'));
     client.scommands = new discord.Collection();
     for (const file of commandFilesS) {
         console.log(file)
