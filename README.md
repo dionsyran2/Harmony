@@ -17,12 +17,43 @@
 7. Press `enter` and wait for it to finish.
 ![](https://i.imgur.com/Zv0jEH9.png)
 
-### Create the bot
+### Create the bot.
 1. Go to the [discord developer page](https://discord.com/developers/applications).
 2. Click on **New application** and give it a name.
 ![](https://i.imgur.com/bMhy0yY.png)
 3. Go to **Bot** and Add Bot.
 ![](https://i.imgur.com/dDo0DgP.png)
-4. From here take note of the bot's Token.
-5. Go back to **General Information**.
-Work In progress---
+4. From here copy the bot's Token.
+
+### Configure the bot.
+#### config.json
+1. In your code editor open the file named `config.json`.
+2. Replace `YourBotTokenHere` with your bot's token.
+3. Go to your bot's page from the [discord developer page](https://discord.com/developers/applications).
+4. Copy the **Application ID**.
+![](https://i.imgur.com/kSsr1BE.png)
+5. Replace `YourBotIdHere` with the ID you just copied.
+
+#### dev.json
+This is the list of User Ids of the people who will be able to use the reload command
+
+Put the ID's of the users who you want to be able to use the reload command, as a string (inside "") separated by commas (,) except the last one
+example:
+`
+[
+  "123456789",
+  "987654321"
+]
+`
+
+#### botinfo.json
+Just replace the info, you can do it. Its the info displayed when you use the **info** command
+
+
+### Start your bot
+1. Go to the console
+2. Make sure you are inside the folder with your bot (except is you use Visual Studio Code)
+3. Type `node .` and press enter.
+It will display some texts and if you have done everything right, at the end you will see a message `Logged in as [Your bot's name]`
+
+If you get any errors create a new issue!
